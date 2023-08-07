@@ -8,6 +8,9 @@ inputs:
   token: # The GitHub token to use
     description: 'The GitHub token to use'
     required: true
+  tag-name: # The tag name to use
+    description: 'The tag name to use'
+    required: true
 outputs:
   release-notes:
     description: 'The release notes as string'
