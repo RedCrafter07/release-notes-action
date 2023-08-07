@@ -16,7 +16,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Test
+        id: test
         uses: ./
         with:
           tag-name: ${{ github.event.inputs.tag-name }}
           token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Log
+        run: |
+          echo ${{ steps.test.outputs.tag-name }}
