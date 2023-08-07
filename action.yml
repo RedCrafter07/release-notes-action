@@ -1,0 +1,12 @@
+author: 'RedCrafter07'
+name: 'release-notes-action'
+description: 'This action creates a release notes file based on the commits since the last release'
+runs:
+  using: node16
+  main: 'dist/index.js'
+outputs:
+  release-notes:
+    description: 'The release notes as string'
+branding:
+  icon: file-text
+  color: red
