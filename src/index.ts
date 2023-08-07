@@ -25,6 +25,10 @@ async function run() {
 
 		const notes = releaseNotes.data.body;
 
+		actions.info('Release notes fetched');
+
+		actions.info('Finished!');
+
 		actions.setOutput('release-notes', notes);
 	} catch (error) {
 		actions.setFailed(error.message);
