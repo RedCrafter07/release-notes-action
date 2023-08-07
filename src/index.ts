@@ -17,13 +17,7 @@ async function run() {
 		const { owner, repo } = github.context.repo;
 
 		const releaseNotes = await octokit.request(
-			'GET /repos/{owner}/{repo}/releases/generate-notes',
-			{
-				owner,
-				repo,
-				tag_name: tagName,
-				target_commitish: branch,
-			},
+			`GET /repos/${owner}/${repo}/releases/notes?tag=${tagName}&commitish=${branch}`,
 		);
 
 		const notes = releaseNotes.data.body;
