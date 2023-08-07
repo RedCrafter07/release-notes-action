@@ -11683,13 +11683,7 @@ async function run() {
     const octokit = github.getOctokit(token);
     const { owner, repo } = github.context.repo;
     const releaseNotes = await octokit.request(
-      "GET /repos/{owner}/{repo}/releases/generate-notes",
-      {
-        owner,
-        repo,
-        tag_name: tagName,
-        target_commitish: branch
-      }
+      `GET /repos/${owner}/${repo}/releases/notes?tag=${tagName}&commitish=${branch}`
     );
     const notes = releaseNotes.data.body;
     actions.info("Release notes fetched");
