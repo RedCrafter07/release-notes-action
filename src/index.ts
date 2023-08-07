@@ -7,19 +7,22 @@ async function run() {
 
 		const token = actions.getInput('token', { required: true });
 		const tagName = actions.getInput('tag-name', { required: true });
+		const branch = actions.getInput('branch', { required: false }) || 'main';
 		if (!token) throw new Error('Input "token" is required');
 		if (!tagName) throw new Error('Input "tag-name" is required');
+		if (!branch) throw new Error('Input "branch" is required');
 
 		const octokit = github.getOctokit(token);
 
 		const { owner, repo } = github.context.repo;
 
 		const releaseNotes = await octokit.request(
-			'POST /repos/{owner}/{repo}/releases',
+			'POST /repos/{owner}/{repo}/releases/generate-notes',
 			{
 				owner,
 				repo,
 				tag_name: tagName,
+				target_commitish: branch,
 			},
 		);
 
