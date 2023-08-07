@@ -4,7 +4,8 @@
 	"description": "This action creates a release notes file based on the commits since the last release",
 	"main": "dist/index.js",
 	"scripts": {
-		"build": "esbuild index.js --bundle --platform=node --target=node16 --outfile=dist/index.js"
+		"build": "esbuild src/index.ts --bundle --platform=node --target=node16 --outfile=dist/index.js",
+		"package": "ncc build --source-map --license licenses.txt"
 	},
 	"keywords": [],
 	"author": "RedCrafter07",
@@ -13,6 +14,7 @@
 		"@actions/core": "^1.10.0",
 		"@actions/github": "^5.1.1",
 		"@types/node": "^20.4.8",
+		"@vercel/ncc": "^0.36.1",
 		"esbuild": "^0.18.19"
 	}
 }
