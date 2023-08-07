@@ -1,0 +1,12 @@
+{
+	"name": "release-notes-action",
+	"version": "1.0.0",
+	"description": "This action creates a release notes file based on the commits since the last release",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "RedCrafter07",
+	"license": "GPL-3.0"
+}
