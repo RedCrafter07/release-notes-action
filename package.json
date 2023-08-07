@@ -2,11 +2,17 @@
 	"name": "release-notes-action",
 	"version": "1.0.0",
 	"description": "This action creates a release notes file based on the commits since the last release",
-	"main": "index.js",
+	"main": "dist/index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"build": "esbuild index.js --bundle --platform=node --target=node16 --outfile=dist/index.js"
 	},
 	"keywords": [],
 	"author": "RedCrafter07",
-	"license": "GPL-3.0"
+	"license": "GPL-3.0",
+	"dependencies": {
+		"@actions/core": "^1.10.0",
+		"@actions/github": "^5.1.1",
+		"@types/node": "^20.4.8",
+		"esbuild": "^0.18.19"
+	}
 }
