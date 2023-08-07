@@ -11,6 +11,10 @@ inputs:
   tag-name: # The tag name to use
     description: 'The tag name to use'
     required: true
+  branch:
+    description: 'The branch to use'
+    required: false
+    default: 'main'
 outputs:
   release-notes:
     description: 'The release notes as string'
