@@ -4,6 +4,10 @@ description: 'This action creates a release notes file based on the commits sinc
 runs:
   using: node16
   main: 'dist/index.js'
+inputs:
+  token: # The GitHub token to use
+    description: 'The GitHub token to use'
+    required: true
 outputs:
   release-notes:
     description: 'The release notes as string'
