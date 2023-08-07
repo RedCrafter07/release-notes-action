@@ -16,5 +16,9 @@
 		"@types/node": "^20.4.8",
 		"@vercel/ncc": "^0.36.1",
 		"esbuild": "^0.18.19"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/RedCrafter07/release-notes-action.git"
 	}
 }
