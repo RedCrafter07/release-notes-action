@@ -27,6 +27,8 @@ async function run() {
 
 		actions.info('Release notes fetched');
 
+		actions.debug(`Release notes: ${notes}`);
+
 		actions.info('Finished!');
 
 		actions.setOutput('release-notes', notes);
