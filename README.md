@@ -24,6 +24,12 @@ jobs:
     run: echo ${{ steps.notes.outputs.release-notes }}
 ```
 
+You can access the output by using the specified id and output name. In the example above, the output name is `release-notes` and the id is `notes`. You can change these to whatever you want, and replace the echo command with a more useful one.
+
+### Warning!
+
+This is not intended to be just copied. It's rather meant as an example to show how you can integrate the action into your workflow
+
 ## Inputs
 
 | Name       | Required | Description                                 | Default |
