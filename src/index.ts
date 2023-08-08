@@ -17,7 +17,7 @@ async function run() {
 		const { owner, repo } = github.context.repo;
 
 		const releaseNotes = await octokit.request(
-			'GET /repos/{owner}/{repo}/releases/generate-notes',
+			'POST /repos/{owner}/{repo}/releases/generate-notes',
 			{
 				owner,
 				repo,
