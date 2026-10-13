@@ -4,7 +4,7 @@
 	"description": "This action creates a release notes file based on the commits since the last release",
 	"main": "dist/index.js",
 	"scripts": {
-		"build": "esbuild src/index.ts --bundle --platform=node --target=node16 --outfile=dist/index.js",
+		"build": "esbuild src/index.ts --bundle --platform=node --target=node24 --outfile=dist/index.js",
 		"package": "ncc build --source-map --license licenses.txt"
 	},
 	"keywords": [],
