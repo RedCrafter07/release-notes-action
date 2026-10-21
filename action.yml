@@ -2,7 +2,7 @@ author: 'RedCrafter07'
 name: 'release-notes-action'
 description: 'This action creates a release notes file based on the commits since the last release'
 runs:
-  using: node16
+  using: node24
   main: 'dist/index.js'
 inputs:
   token: # The GitHub token to use
